@@ -8,7 +8,7 @@ Coleção utilizada: `registros`
 
 ---
 
-### 1. Quantos registros existem na tabela indicada?
+### ✅ 1. Quantos registros existem na tabela indicada?
 
 ```js
 db.registros.countDocuments()
@@ -20,7 +20,7 @@ db.registros.countDocuments()
 
 ---
 
-### 2. Qual o número de indicações por categoria, agrupadas por categoria?
+### ✅ 2. Qual o número de indicações por categoria, agrupadas por categoria?
 
 ```js
 db.registros.aggregate([
@@ -35,7 +35,7 @@ db.registros.aggregate([
 
 ---
 
-### 3. Quantas vezes Natalie Portman foi indicada ao Oscar?
+### ✅ 3. Quantas vezes Natalie Portman foi indicada ao Oscar?
 
 ```js
 db.registros.find({ nome_do_indicado: "Natalie Portman" }).count()
@@ -47,7 +47,7 @@ db.registros.find({ nome_do_indicado: "Natalie Portman" }).count()
 
 ---
 
-### 4. Quantos Oscars Natalie Portman ganhou?
+### ✅ 4. Quantos Oscars Natalie Portman ganhou?
 
 ```js
 db.registros.find({ nome_do_indicado: "Natalie Portman", vencedor: "true" }).count()
@@ -59,7 +59,7 @@ db.registros.find({ nome_do_indicado: "Natalie Portman", vencedor: "true" }).cou
 
 ---
 
-### 5. Quantas vezes Viola Davis foi indicada ao Oscar? Quantas ganhou?
+### ✅ 5. Quantas vezes Viola Davis foi indicada ao Oscar? Quantas ganhou?
 
 ```js
 db.registros.find({ nome_do_indicado: "Viola Davis" }).count()
@@ -72,7 +72,7 @@ db.registros.find({ nome_do_indicado: "Viola Davis", vencedor: "true" }).count()
 
 ---
 
-### 6. Amy Adams já ganhou algum Oscar?
+### ✅ 6. Amy Adams já ganhou algum Oscar?
 
 ```js
 db.registros.find({ nome_do_indicado: "Amy Adams", vencedor: "true" }).count()
@@ -84,7 +84,7 @@ db.registros.find({ nome_do_indicado: "Amy Adams", vencedor: "true" }).count()
 
 ---
 
-### 7. Quais os atores/atrizes que foram indicados mais de uma vez?
+### ✅ 7. Quais os atores/atrizes que foram indicados mais de uma vez?
 
 ```js
 db.registros.aggregate([
@@ -100,7 +100,7 @@ db.registros.aggregate([
 
 ---
 
-### 8. A série Toy Story ganhou Oscar em quais anos?
+### ✅ 8. A série Toy Story ganhou Oscar em quais anos?
 
 ```js
 db.registros.find({
@@ -120,7 +120,7 @@ db.registros.find({
 
 ---
 
-### 9. A partir de que ano a categoria "ACTRESS" deixa de existir?
+### ✅ 9. A partir de que ano a categoria "ACTRESS" deixa de existir?
 
 ```js
 db.registros.aggregate([
@@ -135,7 +135,7 @@ db.registros.aggregate([
 
 ---
 
-### 10. Quem ganhou o primeiro Oscar de Melhor Atriz? Em que ano?
+### ✅ 10. Quem ganhou o primeiro Oscar de Melhor Atriz? Em que ano?
 
 ```js
 db.registros.find({
@@ -150,7 +150,7 @@ db.registros.find({
 
 ---
 
-### 11. Atualizar o campo "vencedor" de texto para binário
+### ✅ 11. Atualizar o campo "vencedor" de texto para binário
 
 ```js
 db.registros.updateMany({ vencedor: "true" }, { $set: { vencedor: 1 } })
@@ -163,7 +163,7 @@ db.registros.updateMany({ vencedor: "false" }, { $set: { vencedor: 0 } })
 
 ---
 
-### 12. Em qual edição "Crash" concorreu ao Oscar?
+### ✅ 12. Em qual edição "Crash" concorreu ao Oscar?
 
 ```js
 db.registros.find({ nome_do_filme: /Crash/i }, { cerimonia: 1, ano_cerimonia: 1 })
@@ -175,7 +175,7 @@ db.registros.find({ nome_do_filme: /Crash/i }, { cerimonia: 1, ano_cerimonia: 1 
 
 ---
 
-### 13. O filme "Central do Brasil" aparece no Oscar?
+### ✅ 13. O filme "Central do Brasil" aparece no Oscar?
 
 ```js
 db.registros.find({ nome_do_filme: /Central do Brasil/i })
@@ -187,7 +187,7 @@ db.registros.find({ nome_do_filme: /Central do Brasil/i })
 
 ---
 
-### 14. Incluir 3 filmes que nunca foram indicados mas mereciam
+### ✅ 14. Incluir 3 filmes que nunca foram indicados mas mereciam
 
 ```js
 // Exemplo com três inserções manuais (gosto pessoal)
@@ -200,7 +200,7 @@ db.registros.insertMany([...])
 
 ---
 
-### 15. Denzel Washington já ganhou algum Oscar?
+### ✅ 15. Denzel Washington já ganhou algum Oscar?
 
 ```js
 db.registros.find({ nome_do_indicado: "Denzel Washington", vencedor: 1 })
@@ -212,7 +212,7 @@ db.registros.find({ nome_do_indicado: "Denzel Washington", vencedor: 1 })
 
 ---
 
-### 16. Quais filmes ganharam Melhor Filme e Melhor Diretor na mesma cerimônia?
+### ✅ 16. Quais filmes ganharam Melhor Filme e Melhor Diretor na mesma cerimônia?
 
 ```js
 db.registros.aggregate([
@@ -237,7 +237,7 @@ db.registros.aggregate([
 
 ---
 
-### 17. Denzel Washington e Jamie Foxx já concorreram ao Oscar no mesmo ano?
+### ✅ 17. Denzel Washington e Jamie Foxx já concorreram ao Oscar no mesmo ano?
 
 ```js
 db.registros.aggregate([
