@@ -6,8 +6,6 @@ Seja bem-vindo à calçada da fama dos dados! 🎬 Este documento contém uma s�
 
 Coleção utilizada: `registros`
 
----
-
 ### ✅ 1. Quantos registros existem na tabela indicada?
 
 ```js
