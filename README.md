@@ -251,7 +251,4 @@ db.registros.aggregate([
 
 **Explicação:** Usa agregação com filtro para verificar se ambos estavam presentes no mesmo ano.
 
----
-
-Feito com ✨ glamour, 💾 dados  em nome do ❤️ cinema.
 
